@@ -1,0 +1,35 @@
+{
+  "name": "aws_base",
+  "description": "Installs/Configures aws_base for Route53 hostname provisioning",
+  "long_description": "Description\n===========\nMaintains the Route53 hostname provisioning for AWS instances.\n\nRequirements\n============\nn/a\nAttributes\n==========\n\n```ruby\ndefault[:aws_base][:zone] = nil\ndefault[:aws_base][:data_bag][:name] = \"aws\"\ndefault[:aws_base][:data_bag][:item] = \"readonly\" # route_53 write and ec2:readonly access sufficient via IAM\n```\n\nUsage\n=====\n\nDatabag storage of AWS Credentials should reside in the following keys:\n\n - `aws_access_key_id`\n - `aws_secret_access_key`\n\n```json\n{\n    \"aws_base\": {\n        \"zone\": \"aws.zircote.com\",\n        \"data_bag\": {\n            \"name\": \"aws\",\n            \"item\": \"readonly\"\n        }\n\n    }\n}\n\n```\n",
+  "maintainer": "Robert Allen @zircote",
+  "maintainer_email": "zircote@gmail.com",
+  "license": "All rights reserved",
+  "platforms": {
+    "redhat": ">= 0.0.0",
+    "centos": ">= 0.0.0",
+    "fedora": ">= 0.0.0",
+    "amazon": ">= 0.0.0",
+    "scientific": ">= 0.0.0"
+  },
+  "dependencies": {
+    "python": ">= 0.0.0"
+  },
+  "recommendations": {
+  },
+  "suggestions": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "replacing": {
+  },
+  "attributes": {
+  },
+  "groupings": {
+  },
+  "recipes": {
+  },
+  "version": "0.1.2"
+}
